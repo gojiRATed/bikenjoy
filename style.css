@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-/* Navbar - Custom visual styles to complement Bootstrap */
+/* Navbar */
 .navbar-custom {
     background-color: rgba(17, 17, 17, 0.95);
     padding: 1rem 0;
@@ -46,7 +46,7 @@ a {
     font-weight: 700;
 }
 
-/* Nav Links Custom Adjustments */
+/* Nav Links */
 .navbar-custom .nav-link {
     font-size: 14px;
     font-weight: 600;
@@ -71,16 +71,16 @@ a {
     content: '';
     position: absolute;
     bottom: -5px;
-    left: 8px; /* Offset for Bootstrap's default padding */
+    left: 8px; 
     width: calc(100% - 16px);
     height: 3px;
     background-color: #FFD200;
     border-radius: 2px;
 }
 
-/* Dropdown Menu Custom Styling for Bootstrap */
+/* Dropdown */
 .dropdown:hover .dropdown-menu {
-    display: block; /* For hover effect if desired over Bootstrap click */
+    display: block; 
     opacity: 1;
     transform: translateY(0);
 }
@@ -112,7 +112,7 @@ a {
     padding-left: 25px;
 }
 
-/* Order Button (Header) */
+/* Order Button */
 .btn-order {
     background-color: #FFD200;
     color: #000;
@@ -160,8 +160,6 @@ a {
     transform: scale(1) translateX(-1px);
 }
 
-/* Home Page Specific Styles */
-
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -173,7 +171,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px; /* Offset for navbar */
+    padding-top: 80px; 
 }
 
 /* Gradient Overlay */
@@ -213,7 +211,7 @@ a {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
-/* Hero Buttons - Custom sizing, hover effects */
+/* Hero Buttons */
 
 .btn-hero {
     display: flex;
@@ -260,13 +258,13 @@ a {
     transform: translateY(-2px);
 }
 
-/* Features Bar Custom Visuals */
+/* Features Bar */
 .features-bar {
     background-color: #111;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Join Us CTA Section Visuals */
+/* Join Us CTA */
 .cta-section {
     background-color: #1A1A1A;
 }
@@ -308,10 +306,10 @@ a {
     transform: scale(1.05);
 }
 
-/* Discover Our Bikes Showcase */
+/* Bikes Showcase */
 .bikes-showcase {
     background-color: #000000;
-    padding: 6rem 0; /* Horizontal padding removed for full-width effect */
+    padding: 6rem 0; 
     color: #FFFFFF;
     width: 100%;
 }
@@ -407,7 +405,7 @@ a {
 }
 
 .category-label::after {
-    content: '\F2DA'; /* Bootstrap Icon Lightning */
+    content: '\F2DA'; 
     font-family: 'bootstrap-icons';
 }
 
