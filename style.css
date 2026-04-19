@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar - Custom visual styles to complement Bootstrap */
+.navbar-custom {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.y-logo {
+    width: 28px;
+    height: 28px;
+    color: #FFD200;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #FFD200;
+}
+
+.logo-text .bold {
+    font-weight: 700;
+}
+
+/* Nav Links Custom Adjustments */
+.navbar-custom .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFD200 !important;
+    transition: 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #FFFFFF !important;
+}
+
+.navbar-custom .nav-link.active {
+    color: #FFD200 !important;
+}
+
+.navbar-custom .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 8px; /* Offset for Bootstrap's default padding */
+    width: calc(100% - 16px);
+    height: 3px;
+    background-color: #FFD200;
+    border-radius: 2px;
+}
+
+/* Dropdown Menu Custom Styling for Bootstrap */
+.dropdown:hover .dropdown-menu {
+    display: block; /* For hover effect if desired over Bootstrap click */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu-custom {
+    background-color: #1A1A1A;
+    border: none;
+    border-top: 3px solid #FFD200;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-radius: 0 0 8px 8px;
+    margin-top: 0; 
+}
+
+.dropdown-item-custom {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #F0F0F0 !important;
+    transition: 0.3s ease;
+}
+
+.dropdown-item-custom:hover {
+    background-color: rgba(255, 210, 0, 0.1);
+    color: #FFD200 !important;
+    padding-left: 25px;
+}
+
+/* Order Button (Header) */
+.btn-order {
+    background-color: #FFD200;
+    color: #000;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #E6BD00;
+    transform: translateY(-2px);
+}
+
+/* Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border: 3px solid #FFD200;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.y-logo-fab {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    transform: scale(1) translateX(-1px);
+}
+
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    background-image: url('asset/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; /* Offset for navbar */
+}
+
+/* Gradient Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(20, 20, 20, 0.8) 100%);
+    background-color: rgba(90, 60, 0, 0.3); /* Warm tint for the background */
+    mix-blend-mode: multiply;
+}
+
+.hero-title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    color: #FFD200;
+    line-height: 1.15;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
+
+    font-size: 48px;
+    font-weight: 900;
+    color: #FFD200;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #F0F0F0;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Hero Buttons - Custom sizing, hover effects */
+
+.btn-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-yellow {
+    background-color: #FFD200;
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background-color: #E6BD00;
+    transform: translateY(-2px);
+}
+
+.btn-green {
+    background-color: #38C759;
+    color: #FFFFFF;
+}
+
+.btn-green:hover {
+    background-color: #2DAE4B;
+    transform: translateY(-2px);
+}
+
+.btn-white {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+.btn-white:hover {
+    background-color: #F0F0F0;
+    transform: translateY(-2px);
+}
+
+/* Features Bar Custom Visuals */
+.features-bar {
+    background-color: #111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Join Us CTA Section Visuals */
+.cta-section {
+    background-color: #1A1A1A;
+}
+
+.cta-box {
+    border: 2px solid #FFD200;
+    border-radius: 30px;
+}
+
+.cta-heading {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.1;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-text span {
+    color: #FFD200;
+    font-weight: 700;
+}
+
+.btn-cta {
+    background-color: #FFD200;
+    color: #000;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #E6BD00;
+    transform: scale(1.05);
+}
+
+/* Discover Our Bikes Showcase */
+.bikes-showcase {
+    background-color: #000000;
+    padding: 6rem 0; /* Horizontal padding removed for full-width effect */
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.showcase-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #FFD200;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.bike-card {
+    background: linear-gradient(135deg, #1A1A1A 0%, #000000 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bike-card:hover {
+    transform: translateY(-10px);
+    border-color: #FFD200;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-logo {
+    width: 80px;
+    opacity: 0.8;
+}
+
+.brand-tag {
+    font-size: 10px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.bike-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.bike-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.bike-card:hover .bike-image img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category-label {
+    background-color: #FFD200;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-label::after {
+    content: '\F2DA'; /* Bootstrap Icon Lightning */
+    font-family: 'bootstrap-icons';
+}
+
+.bike-model {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.bike-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.feature {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature i {
+    color: #FFD200;
+    font-size: 14px;
+}
+
+.card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.url {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.view-more {
+    color: #FFD200;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.view-more:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
