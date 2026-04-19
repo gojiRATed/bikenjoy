@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand logo" href="index.html">
@@ -36,12 +36,12 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-custom shadow border-0">
-                            <li><a class="dropdown-item dropdown-item-custom" href="#">Our Team</a></li>
-                            <li><a class="dropdown-item dropdown-item-custom" href="#">FAQ</a></li>
-                            <li><a class="dropdown-item dropdown-item-custom" href="#">Contact</a></li>
+                            <li><a class="dropdown-item dropdown-item-custom" href="ourteam.html">Our Team</a></li>
+                            <li><a class="dropdown-item dropdown-item-custom" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item dropdown-item-custom" href="contact.html">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 </ul>
 
                 <a href="#" class="btn btn-order px-4 rounded-pill mt-3 mt-lg-0">Order</a>
@@ -49,7 +49,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero d-flex align-items-center position-relative">
         <div class="hero-overlay"></div>
         <div class="container position-relative z-1">
@@ -76,7 +75,6 @@
         </div>
     </header>
 
-    <!-- Features Bar -->
     <section class="features-bar py-5">
         <div class="container">
             <div class="row text-center text-md-start g-4 align-items-center">
@@ -123,7 +121,6 @@
         </div>
     </section>
 
-    <!-- Join Us Section -->
     <section class="cta-section py-5">
         <div class="container py-5">
             <div class="row align-items-stretch justify-content-center gap-5 gap-lg-0">
@@ -147,14 +144,13 @@
         </div>
     </section>
 
-    <!-- Discover Our Bikes Section -->
     <section class="bikes-showcase container-fluid">
         <div class="showcase-header mb-5">
             <h2 class="showcase-title text-center text-uppercase fw-bold">Discover Our Bikes</h2>
         </div>
 
         <div class="row g-4 flex-nowrap overflow-auto py-4 bikes-row mx-auto" style="max-width: 95%;">
-            <!-- Card 1: Suzuki Hayabusa -->
+            
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -180,7 +176,6 @@
                 </div>
             </div>
 
-            <!-- Card 2: Ninja SS -->
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -206,7 +201,6 @@
                 </div>
             </div>
 
-            <!-- Card 3: Mio M3 -->
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -232,7 +226,6 @@
                 </div>
             </div>
 
-            <!-- Card 4: CBR 150 -->
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -335,7 +328,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -379,11 +371,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-top">
             <div class="row g-4">
-                <!-- Brand Section -->
+                
                 <div class="col-lg-4">
                     <div class="footer-brand">
                         <div class="logo">
@@ -401,29 +392,26 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div class="col-6 col-lg-2">
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="partner.html">Partner</a></li>
                         <li><a href="sewa.html">Sewa Milik</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
 
-                <!-- Support -->
                 <div class="col-6 col-lg-2">
                     <h4 class="footer-title">Bantuan</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Kontak Kami</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Kontak Kami</a></li>
                         <li><a href="#">Syarat & Ketentuan</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div class="col-lg-4">
                     <h4 class="footer-title">Info Kontak</h4>
                     <ul class="contact-info">
@@ -444,7 +432,6 @@
             </div>
         </div>
 
-        <!-- Bottom Footer -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center">
@@ -462,48 +449,37 @@
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
     <a href="#" class="fab">
         <img src="asset/bikenjoy_logo.png" alt="Bikenjoy Logo" class="y-logo-fab" />
     </a>
-    
-    <!-- Bootstrap JS Bundle -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Auto Scroll Script (Infinite Loop) -->
     <script>
         const scrollContainer = document.querySelector('.bikes-row');
         
-        // Clone semua kartu untuk membuat efek loop tak terbatas
         const originalContent = scrollContainer.innerHTML;
-        scrollContainer.innerHTML += originalContent; // Duplikasi kartu
+        scrollContainer.innerHTML += originalContent; 
 
-        let speed = 1; // Kecepatan jalan (piksel per frame)
+        let speed = 1; 
         let isHovered = false;
-
-        // Berhenti saat mouse di atas kontainer
         scrollContainer.addEventListener('mouseenter', () => isHovered = true);
         scrollContainer.addEventListener('mouseleave', () => isHovered = false);
 
         function autoScroll() {
             if (!isHovered) {
-                // Gunakan 'auto' agar pergerakan piksel per frame mulus tanpa jeda
                 scrollContainer.style.scrollBehavior = 'auto';
                 scrollContainer.scrollLeft += speed;
                 
-                // Jika sudah melewati lebar konten asli, reset ke awal tanpa terlihat (karena gambarnya sama)
-                // Kita bagi 2 karena kita melakukan duplikasi konten di atas
                 if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
                     scrollContainer.scrollLeft = 0;
                 }
             } else {
-                // Kembalikan ke 'smooth' agar saat user geser manual terasa halus
                 scrollContainer.style.scrollBehavior = 'smooth';
             }
             requestAnimationFrame(autoScroll);
         }
 
-        // Mulai animasi
         autoScroll();
     </script>
     <script src="contact.js"></script>

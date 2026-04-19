@@ -1,4 +1,4 @@
-/* Hero Section */
+
 .sewa-hero {
     height: 100vh;
     min-height: 700px;
@@ -7,7 +7,6 @@
     background-position: center;
 }
 
-/* Gradient Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -15,7 +14,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(20, 20, 20, 0.8) 100%);
-    background-color: rgba(90, 60, 0, 0.3); /* Warm tint for the background */
+    background-color: rgba(90, 60, 0, 0.3); 
     mix-blend-mode: multiply;
 }
 
@@ -32,3 +31,4 @@
 .hero-subtitle {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
+
