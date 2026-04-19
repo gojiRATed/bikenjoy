@@ -5,9 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikenjoy - Motorcycle Rental</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Google Fonts: Inter -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -155,8 +153,8 @@
             <h2 class="showcase-title text-center text-uppercase fw-bold">Discover Our Bikes</h2>
         </div>
 
-        <div class="row g-4 justify-content-center mx-auto" style="max-width: 95%;">
-            <!-- Card 1: DeSultan -->
+        <div class="row g-4 flex-nowrap overflow-auto py-4 bikes-row mx-auto" style="max-width: 95%;">
+            <!-- Card 1: Suzuki Hayabusa -->
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -182,7 +180,7 @@
                 </div>
             </div>
 
-            <!-- Card 2: Tempur -->
+            <!-- Card 2: Ninja SS -->
             <div class="col-12 col-md-6 col-xl-3">
                 <div class="bike-card">
                     <div class="card-brand">
@@ -259,8 +257,210 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="bike-card">
+                    <div class="card-brand">
+                        <img src="asset/bikenjoy_logo.png" alt="Logo" class="mini-logo" />
+                        <span class="brand-tag">Racing</span>
+                    </div>
+                    <div class="bike-image">
+                        <img src="asset/nmax.png" alt="Nmax" />
+                    </div>
+                    <div class="card-info">
+                        <div class="category-label">Sewa Motor</div>
+                        <h3 class="bike-model">Nmax</h3>
+                        <div class="bike-features">
+                            <p>Include:</p>
+                            <div class="feature"><i class="bi bi-shield-check"></i> 2 x Helm</div>
+                            <div class="feature"><i class="bi bi-cloud-rain"></i> 2 x Raincoat</div>
+                            <div class="feature"><i class="bi bi-phone"></i> Phone Holder</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="url">www.bikenjoy.id</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="bike-card">
+                    <div class="card-brand">
+                        <img src="asset/bikenjoy_logo.png" alt="Logo" class="mini-logo" />
+                        <span class="brand-tag">Racing</span>
+                    </div>
+                    <div class="bike-image">
+                        <img src="asset/XSR.png" alt="XSR" />
+                    </div>
+                    <div class="card-info">
+                        <div class="category-label">Sewa Motor</div>
+                        <h3 class="bike-model">XSR</h3>
+                        <div class="bike-features">
+                            <p>Include:</p>
+                            <div class="feature"><i class="bi bi-shield-check"></i> 2 x Helm</div>
+                            <div class="feature"><i class="bi bi-cloud-rain"></i> 2 x Raincoat</div>
+                            <div class="feature"><i class="bi bi-phone"></i> Phone Holder</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="url">www.bikenjoy.id</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="bike-card">
+                    <div class="card-brand">
+                        <img src="asset/bikenjoy_logo.png" alt="Logo" class="mini-logo" />
+                        <span class="brand-tag">Racing</span>
+                    </div>
+                    <div class="bike-image">
+                        <img src="asset/kzr.jpg" alt="kzr" />
+                    </div>
+                    <div class="card-info">
+                        <div class="category-label">Sewa Motor</div>
+                        <h3 class="bike-model">kzr</h3>
+                        <div class="bike-features">
+                            <p>Include:</p>
+                            <div class="feature"><i class="bi bi-shield-check"></i> 2 x Helm</div>
+                            <div class="feature"><i class="bi bi-cloud-rain"></i> 2 x Raincoat</div>
+                            <div class="feature"><i class="bi bi-phone"></i> Phone Holder</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="url">www.bikenjoy.id</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-card shadow-lg">
+                        <div id="contactAlert" class="alert d-none alert-fade mb-4"></div>
+                        <h2 class="contact-title">Hubungi Kami</h2>
+                        <p class="contact-subtitle mx-auto">
+                            Memiliki pertanyaan atau butuh bantuan lebih lanjut? 
+                            Tim Bikenjoy siap membantu Anda secara langsung melalui formulir di bawah ini.
+                        </p>
+                        
+                        <form id="contactForm" class="contact-form mt-4" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nama Lengkap</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Alamat email Anda" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subjek</label>
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Apa yang ingin Anda tanyakan?" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Pesan</label>
+                                    <textarea id="message" name="message" class="form-control" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" id="submitBtn" class="btn btn-submit">
+                                        <i class="bi bi-send-fill me-2"></i> Kirim Pesan Sekarang
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="row g-4">
+                <!-- Brand Section -->
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <img src="asset/bikenjoy_logo.png" alt="Bikenjoy Logo" width="130" />
+                        </div>
+                        <p class="footer-description">
+                            Bikenjoy adalah platform penyewaan sepeda motor terpercaya di Indonesia. Kami menghubungkan Anda dengan penyedia rental terbaik untuk pengalaman berkendara yang aman dan nyaman.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-threads"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                        <li><a href="sewa.html">Sewa Milik</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Bantuan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-4">
+                    <h4 class="footer-title">Info Kontak</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Jl. Raya Utama No. 123, Mojokerto, Indonesia</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-whatsapp"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <span>support@bikenjoy.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright-text">© 2026 BIKENJOY. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Floating Action Button -->
     <a href="#" class="fab">
@@ -268,7 +468,45 @@
     </a>
     
     <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Auto Scroll Script (Infinite Loop) -->
+    <script>
+        const scrollContainer = document.querySelector('.bikes-row');
+        
+        // Clone semua kartu untuk membuat efek loop tak terbatas
+        const originalContent = scrollContainer.innerHTML;
+        scrollContainer.innerHTML += originalContent; // Duplikasi kartu
+
+        let speed = 1; // Kecepatan jalan (piksel per frame)
+        let isHovered = false;
+
+        // Berhenti saat mouse di atas kontainer
+        scrollContainer.addEventListener('mouseenter', () => isHovered = true);
+        scrollContainer.addEventListener('mouseleave', () => isHovered = false);
+
+        function autoScroll() {
+            if (!isHovered) {
+                // Gunakan 'auto' agar pergerakan piksel per frame mulus tanpa jeda
+                scrollContainer.style.scrollBehavior = 'auto';
+                scrollContainer.scrollLeft += speed;
+                
+                // Jika sudah melewati lebar konten asli, reset ke awal tanpa terlihat (karena gambarnya sama)
+                // Kita bagi 2 karena kita melakukan duplikasi konten di atas
+                if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+                    scrollContainer.scrollLeft = 0;
+                }
+            } else {
+                // Kembalikan ke 'smooth' agar saat user geser manual terasa halus
+                scrollContainer.style.scrollBehavior = 'smooth';
+            }
+            requestAnimationFrame(autoScroll);
+        }
+
+        // Mulai animasi
+        autoScroll();
+    </script>
+    <script src="contact.js"></script>
 </body>
 
 </html>
